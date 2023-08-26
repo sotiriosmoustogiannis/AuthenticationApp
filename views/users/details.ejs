@@ -1,21 +1,65 @@
 <%- include('../partials/head') %>
     <div class="container">
         <div class="d-flex align-items-center justify-content-center vh-80">
-            <div class="border rounded p-5">
-                <div>
-                    <h3>Personal info</h3>
-                    <p>Basic info, like your name and photo
-                    </p>
+            <div class="container p-5">
+                <div class="row border rounded-top p-2">
+                    <div class="col-10">
+                        <p>Personal info</p>
+                        <p>Some info may be visible to other people
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <a class="card-link btn btn-outline-secondary" href="/users/<%=profile.user%>/edit">Edit</a>
+                    </div>
                 </div>
-                <h2>LIst of Details</h2>
-                <img src="<%= profile.image%>" class="card-img-top img-fluid" alt="...">
-
-                <ul>
-                    <li>
-                        <%= profile.email %>
-                    </li>
-                    <li></li>
-                </ul>
+                <div class="row border p-2">
+                    <div class="col-3">
+                        <p>Photo</p>
+                    </div>
+                    <div class="col-2">
+                        <img src="<%= profile.image%>" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+                <div class="row border  p-2">
+                    <div class="col-3">
+                        <p>Name</p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <%=profile.name%>
+                        </p>
+                    </div>
+                </div>
+                <div class="row border p-2">
+                    <div class="col-3">
+                        <p>Bio</p>
+                    </div>
+                    <div class="col-9">
+                        <p>
+                            <%=profile.bio%>
+                        </p>
+                    </div>
+                </div>
+                <div class="row border p-2">
+                    <div class="col-3">
+                        <p>Phone</p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <%=profile.phone%>
+                        </p>
+                    </div>
+                </div>
+                <div class="row border rounded-bottom p-2">
+                    <div class="col-3">
+                        <p>Email</p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <%= profile.email %>
+                        </p>
+                    </div>
+                </div>
                 <a class="nav-link" href="/logout">Logout</a>
             </div>
         </div>

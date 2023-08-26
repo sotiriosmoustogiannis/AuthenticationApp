@@ -16,7 +16,7 @@ router.use(function (req, res, next) {
 
 //Register
 router.get('/register', (req, res) => {
-    res.render('users/register')
+    res.render('auth/register')
 })
 
 router.post('/register', catchAsync(async (req, res) => {
@@ -34,7 +34,7 @@ router.post('/register', catchAsync(async (req, res) => {
 
 //Login
 router.get('/login', (req, res) => {
-    res.render('users/login')
+    res.render('auth/login')
 })
 
 router.post('/login', storeReturnTo, passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), (req, res) => {
