@@ -1,0 +1,24 @@
+<%- include('../partials/head') %>
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-center vh-80">
+            <div class="border rounded p-5">
+                <div>
+                    <h3>Personal info</h3>
+                    <p>Basic info, like your name and photo
+                    </p>
+                </div>
+                <h2>LIst of Details</h2>
+                <img src="<%= profile.image%>" class="card-img-top img-fluid" alt="...">
+
+                <ul>
+                    <li>
+                        <%= profile.email %>
+                    </li>
+                    <li></li>
+                </ul>
+                <a class="nav-link" href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
