@@ -1,2 +1,2 @@
 # AuthenticationApp
-Authentication app based on nodejs/express framework using passport library.
+Authentication app based on nodejs/express framework using passport library (local passport).
